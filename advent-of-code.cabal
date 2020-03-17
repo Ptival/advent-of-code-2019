@@ -1,0 +1,52 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: b770173253e7492b581a6d649d8998549a0294ddf5444a2138dae7fd60f72bac
+
+name:           advent-of-code
+version:        0.1.0
+author:         Valentin Robert <valentin.robert.42@gmail.com>
+maintainer:     Valentin Robert <valentin.robert.42@gmail.com>
+license:        BSD3
+build-type:     Simple
+
+library
+  exposed-modules:
+      Fuel
+  other-modules:
+      Paths_advent_of_code
+  hs-source-dirs:
+      lib
+  default-extensions: BlockArguments ConstraintKinds DataKinds DeriveGeneric DuplicateRecordFields FlexibleContexts GADTs KindSignatures LambdaCase MonoLocalBinds NamedFieldPuns RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving TypeApplications TypeFamilies TypeOperators UnicodeSyntax
+  ghc-options: -fplugin=Polysemy.Plugin -Wall -Werror
+  build-depends:
+      base >=4.13.0.0 && <4.14
+    , lens
+    , monad-loops
+    , polysemy >=1.3.0.0 && <1.4
+    , polysemy-plugin >=0.2.5.0 && <0.3
+    , split >=0.2.3.4 && <0.3
+    , string-interpolate >=0.2.0.0 && <0.3
+  default-language: Haskell2010
+
+executable day1
+  main-is: Day1.hs
+  other-modules:
+      Paths_advent_of_code
+  hs-source-dirs:
+      exec/day1
+  default-extensions: BlockArguments ConstraintKinds DataKinds DeriveGeneric DuplicateRecordFields FlexibleContexts GADTs KindSignatures LambdaCase MonoLocalBinds NamedFieldPuns RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving TypeApplications TypeFamilies TypeOperators UnicodeSyntax
+  ghc-options: -fplugin=Polysemy.Plugin -Wall -Werror
+  build-depends:
+      advent-of-code
+    , base >=4.13.0.0 && <4.14
+    , lens
+    , monad-loops
+    , polysemy >=1.3.0.0 && <1.4
+    , polysemy-plugin >=0.2.5.0 && <0.3
+    , split >=0.2.3.4 && <0.3
+    , string-interpolate >=0.2.0.0 && <0.3
+  default-language: Haskell2010
