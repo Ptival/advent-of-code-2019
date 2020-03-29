@@ -1,0 +1,10 @@
+cradle:
+  stack:
+    - path: "./lib"
+      component: "advent-of-code:lib"
+    - path: "./exe/day1"
+      component: "advent-of-code:exe:day1"
+    - path: "./exe/day2"
+      component: "advent-of-code:exe:day2"
+    - path: "./exe/day3"
+      component: "advent-of-code:exe:day3"

@@ -38,14 +38,22 @@ dependencies:
   # - tasty-smallcheck ^>= 0.8.1
 
 executables:
+
   day1:
     main: Day1.hs
     source-dirs: exe/day1
     dependencies:
       - advent-of-code
+
   day2:
     main: Day2.hs
     source-dirs: exe/day2
+    dependencies:
+      - advent-of-code
+
+  day3:
+    main: Day3.hs
+    source-dirs: exe/day3
     dependencies:
       - advent-of-code
 

@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ef22bc03c0adadf4ee15fcf6096989070ffc7c0b81410fd6c2f00ecf3facbe87
+-- hash: 4e4e04b3a6f5e745b0f9228060796269af808ab494af5f543e09752ceda2ecc8
 
 name:           advent-of-code
 version:        0.1.0
@@ -58,6 +58,25 @@ executable day2
       Paths_advent_of_code
   hs-source-dirs:
       exe/day2
+  default-extensions: BlockArguments ConstraintKinds DataKinds DeriveGeneric DuplicateRecordFields FlexibleContexts GADTs KindSignatures LambdaCase MonoLocalBinds NamedFieldPuns RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving TypeApplications TypeFamilies TypeOperators UnicodeSyntax
+  ghc-options: -fplugin=Polysemy.Plugin -Wall -Werror
+  build-depends:
+      advent-of-code
+    , base >=4.13.0.0 && <4.14
+    , lens
+    , monad-loops
+    , polysemy >=1.3.0.0 && <1.4
+    , polysemy-plugin >=0.2.5.0 && <0.3
+    , split >=0.2.3.4 && <0.3
+    , string-interpolate >=0.2.0.0 && <0.3
+  default-language: Haskell2010
+
+executable day3
+  main-is: Day3.hs
+  other-modules:
+      Paths_advent_of_code
+  hs-source-dirs:
+      exe/day3
   default-extensions: BlockArguments ConstraintKinds DataKinds DeriveGeneric DuplicateRecordFields FlexibleContexts GADTs KindSignatures LambdaCase MonoLocalBinds NamedFieldPuns RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving TypeApplications TypeFamilies TypeOperators UnicodeSyntax
   ghc-options: -fplugin=Polysemy.Plugin -Wall -Werror
   build-depends:
